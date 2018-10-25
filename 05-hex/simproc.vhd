@@ -38,7 +38,8 @@ begin
     PROCESS --Salida reset. Espera y pone a cero el flanco de reset.
     BEGIN
         rsta<='1';
-        rsta<='0' AFTER trst;
+		WAIT FOR trst;
+        rsta<='0';
         wait;
     END PROCESS;
     rst<=rsta;

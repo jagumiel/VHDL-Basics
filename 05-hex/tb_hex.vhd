@@ -38,8 +38,8 @@ begin
 
     inst1: simproc
         generic map(
-            trst=>320ns,
-            tclk=>100ns)
+            trst=>320 ns,
+            tclk=>100 ns)
         port map(
             rst=>rsta,
             clk=>clka,
