@@ -48,12 +48,6 @@ BEGIN --Salidas independientes
     END PROCESS;
     clk<=clka;
 	
---	PROCESS --Salida stb
---    BEGIN
---        WHILE TRUE LOOP
---			wait;
---        END LOOP;
---    END PROCESS;
 	
     PROCESS(cont) --Salida stba
     BEGIN
@@ -66,8 +60,7 @@ BEGIN --Salidas independientes
     
     PROCESS --Salida stbb
     BEGIN
-        WAIT FOR tp;
-        stb_b<=stb_a;
+        stb_b<=stb_a after tp;
     END PROCESS;
     stb<=stb_b; --Preparo la salida.
 	
