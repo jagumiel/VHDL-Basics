@@ -57,12 +57,9 @@ BEGIN --Salidas independientes
             stb_a<='0';
         END IF;
     END PROCESS;
-    
-    PROCESS --Salida stbb
-    BEGIN
-        stb_b<=stb_a after tp;
-    END PROCESS;
-    stb<=stb_b; --Preparo la salida.
+
+    stb_b<=stb_a after tp; --Preparo la salida.
+    stb<=stb_b;
 	
 	PROCESS(clka) --Contador. clka es la senal de la lista de sensibilidad.
     BEGIN
