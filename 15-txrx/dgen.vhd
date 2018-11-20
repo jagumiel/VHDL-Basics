@@ -85,6 +85,7 @@ BEGIN --Salidas independientes
         END IF; 
     END PROCESS;
     
-    dat<=dat_a WHEN stb_b='1' else "ZZZZZZZZ";
+    --dat<=dat_a WHEN stb_b='1' else "ZZZZZZZZ";
+    dat<=dat_a WHEN stb_b='1';
     
 END dataflow ;
