@@ -11,7 +11,7 @@ entity waitd is
 end waitd;
 
 architecture Behavioral of waitd is
-    SIGNAL contador : integer :=0;
+    SIGNAL contador : integer range 0 to 10 :=0;
 
 begin
 
